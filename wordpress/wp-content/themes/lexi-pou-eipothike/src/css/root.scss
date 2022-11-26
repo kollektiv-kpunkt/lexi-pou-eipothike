@@ -1,0 +1,67 @@
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html.noscroll {
+    overflow: hidden;
+}
+
+:root {
+    --ocean-160: #114A5C;
+    --ocean-140: #1A6F8B;
+    --ocean-120: #2294B9;
+    --ocean-110: #27A7D0;
+    --ocean: #2BB9E7;
+    --ocean-90: #41C0EA;
+    --ocean-80: #55C7EC;
+    --ocean-70: #6BCEEF;
+    --ocean-60: #80D5F1;
+    --ocean-50: #95DCF3;
+    --ocean-40: #AAE3F5;
+    --ocean-30: #C0EAF8;
+    --ocean-20: #D5F1FA;
+    --ocean-10: #EAF8FD;
+    --ocean-slight: #F4FBFE;
+    --apple-160: #62201B;
+    --apple-140: #933029;
+    --apple-120: #C44036;
+    --apple-110: #DD483D;
+    --apple-100: #F55044;
+    --apple-90: #F66257;
+    --apple-80: #F77369;
+    --apple-70: #F8857D;
+    --apple-60: #F9968F;
+    --apple-50: #FAA8A2;
+    --apple-40: #FBB9B4;
+    --apple-30: #FCCBC7;
+    --apple-20: #FDDCDA;
+    --apple-10: #FEEEED;
+    --apple-slight: #FEF6F5;
+    --sky-120: #1C849A;
+    --sky-110: #2095AE;
+    --sky-100: #23A5C1;
+    --sky-90: #39AEC8;
+    --sky-80: #4FB7CD;
+    --sky-70: #65C0D4;
+    --sky-60: #7BC9DA;
+    --sky-50: #91D2E0;
+    --sky-40: #A7DBE6;
+    --sky-30: #BDE4ED;
+    --sky-20: #D3EDF3;
+    --sky-10: #E9F6F9;
+    --sky-slight: #F4FAFC;
+    --grape-120: #520A75;
+    --grape-110: #5D0C84;
+    --grape-100: #670D92;
+    --grape-90: #77269D;
+    --grape-80: #853DA8;
+    --grape-70: #9556B3;
+    --grape-60: #A46EBE;
+    --grape-50: #B386C9;
+    --grape-40: #C29ED3;
+    --grape-30: #D2B7DF;
+    --grape-20: #E1CFE9;
+    --grape-10: #F0E7F5;
+    --grape-0: #F7F3F9;
+}

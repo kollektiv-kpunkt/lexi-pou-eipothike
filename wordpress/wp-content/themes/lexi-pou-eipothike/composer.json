@@ -1,0 +1,16 @@
+{
+  "name": "kollektiv-kpunkt/lexi-pou-eipothike",
+  "description": "WordPress Theme for swiss spoken word poet Fatima Moumouni (https://fatimamoumouni.com/).",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "timothyoesch",
+      "email": "54284649+timothyoesch@users.noreply.github.com"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.4",
+    "ramsey/uuid": "^4.4"
+  }
+}
