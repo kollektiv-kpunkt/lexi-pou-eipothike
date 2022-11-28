@@ -1,5 +1,22 @@
 module.exports = {
   content: require("fast-glob").sync(["./**/*.php", "*.php"]),
+  safelist: [
+    {
+      pattern: /text-(lg|sm|xs|[1-9]xl)/,
+    },
+    {
+      pattern: /(.*)apple(.*)/,
+    },
+    {
+      pattern: /(.*)ocean(.*)/,
+    },
+    {
+      pattern: /(.*)sky(.*)/,
+    },
+    {
+      pattern: /(.*)grape(.*)/,
+    }
+  ],
   theme: {
     extend: {
       colors: {

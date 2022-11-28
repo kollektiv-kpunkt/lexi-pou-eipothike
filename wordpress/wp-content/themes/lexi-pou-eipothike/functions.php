@@ -22,24 +22,29 @@ function lpe_theme_support() {
     add_editor_style('gutenberg/fixes.css' );
     add_theme_support( 'editor-color-palette', array(
         array(
-            'name' => __( 'SP Red', 'themeLangDomain' ),
-            'slug' => 'spred',
-            'color' => '#E4002B',
+            'name' => __( 'Apple', 'themeLangDomain' ),
+            'slug' => 'apple',
+            'color' => '#F55044',
         ),
         array(
-            'name' => __( 'SP Red 120', 'themeLangDomain' ),
-            'slug' => 'spred-120',
-            'color' => '#B60022',
+            'name' => __( 'Ocean', 'themeLangDomain' ),
+            'slug' => 'ocean',
+            'color' => '#2BB9E7',
         ),
         array(
-            'name' => __( 'SP Black', 'themeLangDomain' ),
-            'slug' => 'spblack',
-            'color' => '#000424',
+            'name' => __( 'Sky', 'themeLangDomain' ),
+            'slug' => 'sky',
+            'color' => '#23A5C1',
         ),
         array(
-            'name' => __( 'SP Black 90', 'themeLangDomain' ),
-            'slug' => 'spblack-90',
-            'color' => "#1A1E3A",
+            'name' => __( 'Grape', 'themeLangDomain' ),
+            'slug' => 'grape',
+            'color' => "#670D92",
+        ),
+        array(
+            'name' => __( 'Black', 'themeLangDomain' ),
+            'slug' => 'black',
+            'color' => "#000000",
         ),
         array(
             'name' => __( 'White', 'themeLangDomain' ),
@@ -116,11 +121,50 @@ function lpe_acf() {
 }
 lpe_acf();
 
+add_filter( 'render_block', 'lpe_wrap_blocks', 10, 2 );
+
+function lpe_wrap_blocks( $block_content, $block ) {
+    $skip = [
+        "core/columns"
+    ];
+    if ( strpos($block["blockName"], "core/") !== false && !in_array($block["blockName"], $skip) ) {
+        if (is_front_page(  )) {
+            $block_content = "<div class='fp-container mx-auto' data-block-name='{$block["blockName"]}'>" . $block_content . "</div>";
+        } else {
+            $block_content = "<div class='sm-container mx-auto' data-block-name='{$block["blockName"]}'>" . $block_content . "</div>";
+        }
+    }
+    return $block_content;
+}
+
+
 add_action('acf/init', 'lpe_blocktypes');
 function lpe_blocktypes() {
 
     // Check function exists.
     if( function_exists('acf_register_block_type') ) {
+        acf_register_block_type(array(
+            'name'              => 'fp-heroine',
+            'title'             => __('Frontpage Heroine'),
+            'description'       => __('Heroine to be positioned on the frontpage'),
+            'render_template'   => 'template-parts/blocks/fp-heroine.php',
+            'category'          => 'lpe',
+            'icon'              => '',
+            'keywords'          => array( 'heroine', 'frontpage' ),
+            "supports"          => array(
+                "anchor" => true
+            )
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'fp-events',
+            'title'             => __('Frontpage Eventlist'),
+            'description'       => __('Eventlist to be positioned on the frontpage'),
+            'render_template'   => 'template-parts/blocks/fp-events.php',
+            'category'          => 'lpe',
+            'icon'              => '',
+            'keywords'          => array( 'events', 'frontpage' ),
+        ));
     }
 }
 

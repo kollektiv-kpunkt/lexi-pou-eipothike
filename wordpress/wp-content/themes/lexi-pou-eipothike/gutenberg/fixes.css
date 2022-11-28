@@ -1,0 +1,9 @@
+h1:not(.wp-block-post-title),
+h2:not(.wp-block-post-title),
+h3:not(.wp-block-post-title),
+h4:not(.wp-block-post-title),
+h5:not(.wp-block-post-title),
+h6:not(.wp-block-post-title) {
+    display: block;
+    width: fit-content;
+}

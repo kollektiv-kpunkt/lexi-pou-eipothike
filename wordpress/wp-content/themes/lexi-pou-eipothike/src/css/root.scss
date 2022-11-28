@@ -1,4 +1,5 @@
 html {
+    background-color: var(--apple);
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -27,7 +28,7 @@ html.noscroll {
     --apple-140: #933029;
     --apple-120: #C44036;
     --apple-110: #DD483D;
-    --apple-100: #F55044;
+    --apple: #F55044;
     --apple-90: #F66257;
     --apple-80: #F77369;
     --apple-70: #F8857D;
@@ -40,7 +41,7 @@ html.noscroll {
     --apple-slight: #FEF6F5;
     --sky-120: #1C849A;
     --sky-110: #2095AE;
-    --sky-100: #23A5C1;
+    --sky: #23A5C1;
     --sky-90: #39AEC8;
     --sky-80: #4FB7CD;
     --sky-70: #65C0D4;
@@ -53,7 +54,7 @@ html.noscroll {
     --sky-slight: #F4FAFC;
     --grape-120: #520A75;
     --grape-110: #5D0C84;
-    --grape-100: #670D92;
+    --grape: #670D92;
     --grape-90: #77269D;
     --grape-80: #853DA8;
     --grape-70: #9556B3;
@@ -64,4 +65,12 @@ html.noscroll {
     --grape-20: #E1CFE9;
     --grape-10: #F0E7F5;
     --grape-0: #F7F3F9;
+}
+
+#wpadminbar {
+    display: none;
+}
+
+html {
+    margin-top: 0 !important;
 }

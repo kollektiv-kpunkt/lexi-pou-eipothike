@@ -1,4 +1,4 @@
-import siReplacer from "@kollektiv-kpunkt/simpleicons-replacer";
-
-const replacer = new siReplacer();
-replacer.replace();
+import "./elements/fp-heroine.js";
+import "./elements/fp-events.js";
+import "./helpers/navbar.js";
+import "./helpers/icons.js";

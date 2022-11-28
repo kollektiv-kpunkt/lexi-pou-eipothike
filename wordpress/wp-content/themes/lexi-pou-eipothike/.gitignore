@@ -2,6 +2,7 @@
 /lib/acf/*
 !/lib/acf/acf-json
 /data/*
+*:Zone.Identifier
 
 
 # Composer

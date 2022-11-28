@@ -11,7 +11,7 @@ get_template_part( "template-parts/elements/credits");
 </head>
 <?php
     if (!isset($args["navbar"])) {
-        get_template_part( "template-parts/elements/navbar");
+        get_template_part( "template-parts/elements/navbar", "", array("isFrontpage" => is_front_page()));
     }
 ?>
 <body <?php body_class(); ?>>
