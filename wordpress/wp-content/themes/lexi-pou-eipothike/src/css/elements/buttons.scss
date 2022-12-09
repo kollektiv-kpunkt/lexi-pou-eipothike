@@ -1,0 +1,34 @@
+[data-block-name="core/button"] {
+    width: fit-content;
+}
+
+.lpe-button,
+.wp-block-button {
+    background-color: var(--ocean);
+    font-family: "BigShoulders";
+    font-weight: 700;
+    font-variant: small-caps;
+    font-size: 2rem;
+    padding: 0.3em 0.5em;
+    border-radius: 0;
+    line-height: 0.85;
+
+    &.lpe-button-more::after {
+        content: "\203a";
+        font-size: 1.2em;
+        line-height: 0;
+        margin-left: 0.15em;
+        display: inline-block;
+        transition: 0.125s ease transform;
+    }
+
+    &.lpe-button-more:hover::after {
+        transform: translateX(0.15em);
+    }
+}
+
+.wp-block-button__link {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}

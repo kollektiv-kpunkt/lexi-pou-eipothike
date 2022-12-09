@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="lpe-navbar-logo flex justify-center">
-            <div class="lpe-logo lpe-bigshoulders py-3 px-4 bg-apple text-white leading-none text-4xl text-center">Fatima Moumouni</div>
+            <a class="lpe-logo lpe-noline lpe-bigshoulders py-3 px-4 bg-apple text-white leading-none text-4xl text-center" href="/">Fatima Moumouni</a>
         </div>
         <div class="lpe-navbar-menu flex justify-end">
             <div class="lpe-navbar-menubutton">

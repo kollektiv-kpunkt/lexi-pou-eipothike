@@ -117,3 +117,28 @@ b,
 strong {
     font-weight: 600;
 }
+
+[data-block-name="core/paragraph"]+[data-block-name="core/paragraph"] {
+    margin-top: 1em;
+}
+
+a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button) {
+    color: var(--linkcolor);
+    line-height: 1;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    background-image: linear-gradient(to right, var(--linkcolor) 0, var(--linkcolor) 100%);
+    background-size: 100% 0.15em;
+    background-repeat: repeat-x;
+    background-position: bottom;
+
+    --linkcolor: var(--ocean);
+    --linkhover: white;
+
+    transition: 0.125s ease-in-out background-size, 0.125s ease-in-out color;
+}
+
+a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button):hover {
+    background-size: 100% 100%;
+    color: var(--linkhover);
+}

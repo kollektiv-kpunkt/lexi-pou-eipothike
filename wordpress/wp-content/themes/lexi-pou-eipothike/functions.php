@@ -125,7 +125,7 @@ add_filter( 'render_block', 'lpe_wrap_blocks', 10, 2 );
 
 function lpe_wrap_blocks( $block_content, $block ) {
     $skip = [
-        "core/columns"
+        "core/column"
     ];
     if ( strpos($block["blockName"], "core/") !== false && !in_array($block["blockName"], $skip) ) {
         if (is_front_page(  )) {
@@ -312,3 +312,10 @@ function lpe_register_widgets() {
 		'after_widget'  => '</div>'
 	) );
 }
+
+function my_plugin_body_class($classes) {
+    $classes[] = 'lexi-pou-epithoke';
+    return $classes;
+}
+
+add_filter('body_class', 'my_plugin_body_class');
