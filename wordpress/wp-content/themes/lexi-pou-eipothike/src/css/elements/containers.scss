@@ -12,7 +12,8 @@
     }
 }
 
-.fp-container {
+.fp-container,
+.md-container {
     width: calc(100% - 2 * 4rem);
     max-width: 1380px;
     margin-left: auto;

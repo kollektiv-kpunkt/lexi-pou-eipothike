@@ -4,8 +4,9 @@
     "fields": [
         {
             "key": "field_63852310294fe",
-            "label": "BG Image",
-            "name": "bg_image",
+            "label": "Heroine Image",
+            "name": "heroine_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 1,
@@ -30,6 +31,7 @@
             "key": "field_6385233a294ff",
             "label": "Content",
             "name": "content",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 1,
@@ -44,30 +46,6 @@
             "rows": "",
             "placeholder": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_63852ccb0e915",
-            "label": "BG Image (mobile)",
-            "name": "bg_image_mobile",
-            "type": "image",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
         }
     ],
     "location": [
@@ -88,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669672165
+    "modified": 1673085024
 }

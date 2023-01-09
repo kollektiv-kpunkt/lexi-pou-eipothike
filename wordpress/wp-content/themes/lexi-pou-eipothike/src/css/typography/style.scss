@@ -36,8 +36,8 @@ h6 {
     margin-bottom: clamp(18px, 0.5em, 30px);
 
     &:not(.wp-block-post-title, .nobg) {
-        --bg-color: var(--apple);
-        color: white;
+        --bg-color: var(--primary);
+        color: var(--secondary);
         line-height: 1;
         display: inline;
         padding: 0.05em 0.15em;
@@ -48,40 +48,39 @@ h6 {
         background-color: var(--bg-color);
         box-shadow: 0.05em 0 0 var(--bg-color), -0.05em 0 0 var(--bg-color);
         box-decoration-break: clone;
+    }
 
-        &.has-background {
-            padding: 0.05em 0.15em;
-        }
 
-        &.has-apple-background-color,
-        &.bg-apple {
-            --bg-color: var(--apple);
-        }
+    &.has-background {
+        padding: 0.05em 0.15em;
+    }
 
-        &.has-ocean-background-color,
-        &.bg-ocean {
-            --bg-color: var(--ocean);
-        }
+    &.has-primary-background-color,
+    &.bg-primary {
+        --bg-color: var(--primary);
+    }
 
-        &.has-sky-background-color,
-        &.bg-sky {
-            --bg-color: var(--sky);
-        }
+    &.has-secondary-background-color,
+    &.bg-secondary {
+        --bg-color: var(--secondary);
+    }
 
-        &.has-grape-background-color,
-        &.bg-grape {
-            --bg-color: var(--grape);
-        }
+    &.has-black-background-color,
+    &.bg-black {
+        --bg-color: black;
+    }
 
-        &.has-black-background-color,
-        &.bg-black {
-            --bg-color: black;
-        }
+    &.has-white-background-color,
+    &.bg-white {
+        --bg-color: white;
+    }
 
-        &.has-white-background-color,
-        &.bg-white {
-            --bg-color: white;
-        }
+    &.has-primary-color {
+        color: var(--primary);
+    }
+
+    &.has-secondary-color {
+        color: var(--secondary);
     }
 
     &.wp-block-post-title {
@@ -132,13 +131,28 @@ a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button) {
     background-repeat: repeat-x;
     background-position: bottom;
 
-    --linkcolor: var(--ocean);
-    --linkhover: white;
+    --linkcolor: var(--primary);
+    --linkhover: var(--secondary);
 
     transition: 0.125s ease-in-out background-size, 0.125s ease-in-out color;
+}
+
+.bg-primary {
+    a {
+        --linkcolor: var(--secondary) !important;
+        --linkhover: var(--primary) !important;
+    }
 }
 
 a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button):hover {
     background-size: 100% 100%;
     color: var(--linkhover);
+}
+
+.has-primary-color {
+    color: var(--primary);
+}
+
+.has-secondary-color {
+    color: var(--secondary);
 }

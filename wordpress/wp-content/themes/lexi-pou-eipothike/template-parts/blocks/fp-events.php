@@ -21,15 +21,21 @@ if (count($events) < 3) {
     <div class="lpe-fp-events-outer fp-container flex flex-col gap-5">
         <?php
         foreach($events as $event) :
+            if (in_array("external", get_field("external", $event->ID))) {
+                $event_link = get_field("external_link", $event->ID);
+            } else {
+                $event_link = get_permalink($event->ID);
+            }
         ?>
-        <div class="lpe-fp-event-wrapper text-center p-4 pb-1 bg-apple-110 rounded-sm shadow-md border-b-2 border-b-white">
-            <p class="lpe-event-details"><?= tribe_get_start_date($event->ID, $display_time = false, $date_format = "m.d.") ?><?= (tribe_get_venue( $event->ID) != "") ? " | " . tribe_get_venue( $event->ID) : "" ?></p>
-            <h3 class="lpe-event-title text-6xl nobg text-ocean mb-0"><a class="lpe-noline" href="<?= get_permalink($event->ID) ?>"><?= $event->post_title ?></a></h3>
+        <div class="lpe-fp-event-wrapper text-center p-4 pb-1 bg-primary rounded-sm shadow-md border-b-2 border-b-secondary text-secondary">
+            <p class="lpe-event-details"><?= tribe_get_start_date($event->ID, $display_time = false, $date_format = "m.d.") ?><?= (tribe_get_venue($event->ID) != "" && tribe_get_venue($event->ID) != NULL) ? " | " . tribe_get_venue( $event->ID) : "" ?></p>
+            <h3 class="lpe-event-title text-6xl nobg mb-0"><a class="lpe-noline" href="<?= $event_link ?>"><?= $event->post_title ?></a></h3>
             <div class="lpe-event-description-wrapper max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
                 <p class="lpe-event-description max-w-lg mx-auto pt-4"><?= get_the_excerpt($event->ID) ?></p>
+                <a href="<?= $event_link ?>" class="block mt-2 w-fit mx-auto">Mehr erfahren</a>
             </div>
             <div class="lpe-event-more-button flex w-fit mx-auto transition-transform duration-500 ease-in-out">
-                <i class="inline w-14 h-14 text-white" data-feather="chevrons-down"></i>
+                <i class="inline w-14 h-14 cursor-pointer" data-feather="chevrons-down"></i>
             </div>
         </div>
         <?php

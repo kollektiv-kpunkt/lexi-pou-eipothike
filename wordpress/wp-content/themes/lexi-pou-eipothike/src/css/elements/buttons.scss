@@ -4,14 +4,19 @@
 
 .lpe-button,
 .wp-block-button {
-    background-color: var(--ocean);
+    background-color: var(--primary);
+    color: var(--secondary);
     font-family: "BigShoulders";
     font-weight: 700;
     font-variant: small-caps;
-    font-size: 2rem;
     padding: 0.3em 0.5em;
     border-radius: 0;
     line-height: 0.85;
+
+    &:not([class*="text"]) {
+        font-size: 2rem;
+    }
+
 
     &.lpe-button-more::after {
         content: "\203a";
@@ -31,4 +36,5 @@
     padding: 0;
     background-color: transparent;
     border-radius: 0;
+    color: inherit;
 }

@@ -22,24 +22,14 @@ function lpe_theme_support() {
     add_editor_style('gutenberg/fixes.css' );
     add_theme_support( 'editor-color-palette', array(
         array(
-            'name' => __( 'Apple', 'themeLangDomain' ),
-            'slug' => 'apple',
-            'color' => '#F55044',
+            'name' => __( 'Primary', 'themeLangDomain' ),
+            'slug' => 'primary',
+            'color' => '#FFE700',
         ),
         array(
-            'name' => __( 'Ocean', 'themeLangDomain' ),
-            'slug' => 'ocean',
-            'color' => '#2BB9E7',
-        ),
-        array(
-            'name' => __( 'Sky', 'themeLangDomain' ),
-            'slug' => 'sky',
-            'color' => '#23A5C1',
-        ),
-        array(
-            'name' => __( 'Grape', 'themeLangDomain' ),
-            'slug' => 'grape',
-            'color' => "#670D92",
+            'name' => __( 'Secondary', 'themeLangDomain' ),
+            'slug' => 'secondary',
+            'color' => '#B5003A',
         ),
         array(
             'name' => __( 'Black', 'themeLangDomain' ),
