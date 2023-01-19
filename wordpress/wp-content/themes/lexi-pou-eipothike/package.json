@@ -41,6 +41,7 @@
   "homepage": "https://github.com/kollektiv-kpunkt/lexi-pou-eipothike#readme",
   "dependencies": {
     "@kollektiv-kpunkt/simpleicons-replacer": "^1.0.4",
-    "feather-icons": "^4.29.0"
+    "feather-icons": "^4.29.0",
+    "masonry-layout": "^4.2.2"
   }
 }

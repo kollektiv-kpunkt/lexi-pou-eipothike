@@ -15,7 +15,6 @@
         </div>
         <div class="lpe-fp-heroine-image w-1/2 pl-12">
             <div class="lpe-fp-heroine-image-container h-full relative">
-                <div class="lpe-img-blind bg-secondary absolute mix-blend-overlay opacity-60 top-0 left-0 w-full h-full z-20"></div>
                 <img src="<?= wp_get_attachment_url( get_field("heroine_image")["ID"] ) ?>" alt="Fatima Moumouni - Spoken Word Poet" class="absolute top-0 left-0 w-full h-full object-cover">
             </div>
         </div>

@@ -1,0 +1,72 @@
+{
+    "key": "group_63bc1c2fc0290",
+    "title": "DETAILS: Multimedia",
+    "fields": [
+        {
+            "key": "field_63bc1c30288bf",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "instagram": "Instagram",
+                "facebook": "Facebook",
+                "youtube": "YouTube",
+                "spotify": "Spotify",
+                "soundcloud": "SoundCloud"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63bc1c8d288c0",
+            "label": "ID",
+            "name": "id",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "mutlimedia"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1673272502
+}

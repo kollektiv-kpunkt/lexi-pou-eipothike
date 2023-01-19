@@ -1,7 +1,7 @@
 if (document.querySelector(".lpe-event-more-button")) {
   document.querySelectorAll(".lpe-event-more-button").forEach((icon) => {
     icon.addEventListener("click", (e) => {
-      let event = e.target.closest(".lpe-fp-event-wrapper");
+      let event = e.target.closest(".lpe-fp-event-wrapper") || e.target.closest(".lpe-event-wrapper");
       let eventDescription = event.querySelector(".lpe-event-description-wrapper");
       let eventDescriptionHeight = eventDescription.scrollHeight;
       let svg = e.target.closest("svg");

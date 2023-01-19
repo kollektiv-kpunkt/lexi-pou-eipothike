@@ -1,6 +1,15 @@
 .lexi-pou-epithoke .tribe-events-pg-template {
-    padding-top: 130px !important;
-    max-width: 798px !important;
+    padding-top: 0 !important;
+    max-width: calc(1380px + 40px) !important;
+}
+
+.lexi-pou-epithoke #tribe-events-content {
+    max-width: 798px;
+}
+
+.single-tribe_events .tribe-blocks-editor .tribe-events-single-event-title {
+    color: var(--secondary);
+    font-size: 3rem;
 }
 
 #tribe-events-content a,
@@ -10,10 +19,77 @@
 
 .tribe-block__venue__meta {
     width: 40% !important;
+
+    .tribe-block__venue__name {
+        width: fit-content;
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
 }
 
 .tribe-block__venue__map {
     width: calc(60% - 20px) !important;
+
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .tribe-events-sub-nav li a {
+        background-color: var(--secondary);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active,
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus,
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus-within,
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover,
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active,
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus,
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:focus-within,
+.tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__button:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.tribe-events-c-subscribe-dropdown__list a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button) {
+    --linkcolor: var(--secondary);
+    --linkhover: var(--primary);
+}
+
+#tribe-events-content a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button),
+.tribe-events-event-meta a:not(.lpe-noline):not(.wp-block-button__link):not(.lpe-button) {
+    color: var(--linkcolor);
+
+    &:hover {
+        color: var(--linkhover);
+    }
+}
+
+.single-tribe_events .tribe-events .tribe-events-c-subscribe-dropdown__container,
+.tribe-block__events-link .tribe-events .tribe-events-c-subscribe-dropdown__container,
+.single-tribe_events .tribe-events-c-subscribe-dropdown__button,
+.tribe-block__events-link .tribe-events-c-subscribe-dropdown__button {
+    width: 300px;
+    max-width: 100%;
+}
+
+.events-list #tribe-events-footer,
+.single-tribe_events #tribe-events-footer,
+.tribe-events-day #tribe-events-footer,
+.tribe-events-map #tribe-events-footer,
+.tribe-events-photo #tribe-events-footer {
+    border-top: 1px solid var(--primary);
+}
+
+#tribe-events-footer {
+    margin-top: 2rem;
 }
 
 :root {
@@ -111,7 +187,7 @@
     --z-index-map-event-hover-actions: var(--tec-z-index-map-event-hover-actions);
     --z-index-multiday-event: var(--tec-z-index-multiday-event);
     --z-index-multiday-event-bar: var(--tec-z-index-multiday-event-bar);
-    --tec-color-text-primary: white;
+    --tec-color-text-primary: var(--primary);
     --tec-color-text-primary-light: rgba(20, 24, 39, .62);
     --tec-color-text-secondary: #5d5d5d;
     --tec-color-text-disabled: #d5d5d5;
@@ -124,11 +200,11 @@
     --tec-color-icon-secondary: #bababa;
     --tec-color-icon-active: #141827;
     --tec-color-icon-disabled: #d5d5d5;
-    --tec-color-icon-focus: #334aff;
+    --tec-color-icon-focus: var(--secondary);
     --tec-color-icon-error: #da394d;
     --tec-color-event-icon: #141827;
     --tec-color-event-icon-hover: #334aff;
-    --tec-color-accent-primary: #334aff;
+    --tec-color-accent-primary: var(--secondary);
     --tec-color-accent-primary-hover: rgba(51, 74, 255, .8);
     --tec-color-accent-primary-active: rgba(51, 74, 255, .9);
     --tec-color-accent-primary-background: rgba(51, 74, 255, .07);
@@ -146,7 +222,7 @@
     --tec-color-button-secondary-background: var(--tec-color-accent-secondary-background);
     --tec-color-link-primary: var(--tec-color-text-primary);
     --tec-color-link-accent-hover: rgba(51, 74, 255, .8);
-    --tec-color-border-default: #d5d5d5;
+    --tec-color-border-default: var(--primary);
     --tec-color-border-secondary: #e4e4e4;
     --tec-color-border-tertiary: #7d7d7d;
     --tec-color-border-hover: #5d5d5d;
@@ -263,17 +339,17 @@
     --tec-font-family-sans-serif: "CenturyGothic", Helvetica, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
     --tec-font-weight-regular: 400;
     --tec-font-weight-bold: 700;
-    --tec-font-size-0: 11px;
-    --tec-font-size-1: 12px;
-    --tec-font-size-2: 14px;
-    --tec-font-size-3: 16px;
-    --tec-font-size-4: 18px;
-    --tec-font-size-5: 20px;
-    --tec-font-size-6: 22px;
-    --tec-font-size-7: 24px;
-    --tec-font-size-8: 28px;
-    --tec-font-size-9: 32px;
-    --tec-font-size-10: 42px;
+    --tec-font-size-0: 0.5rem;
+    --tec-font-size-1: 0.75rem;
+    --tec-font-size-2: 1rem;
+    --tec-font-size-3: 1.5rem;
+    --tec-font-size-4: 1.6rem;
+    --tec-font-size-5: 1.75rem;
+    --tec-font-size-6: 2rem;
+    --tec-font-size-7: 2.3rem;
+    --tec-font-size-8: 2.5rem;
+    --tec-font-size-9: 2.75rem;
+    --tec-font-size-10: 3rem;
     --tec-line-height-0: 1.38;
     --tec-line-height-1: 1.42;
     --tec-line-height-2: 1.5;

@@ -51,25 +51,6 @@ function lpe_menus() {
 }
 add_action( 'init', 'lpe_menus' );
 
-// lpe .HTACCESS
-// function lpe_htaccess( $rules ) {
-//     $content = <<<EOD
-//     \n
-//     Options +FollowSymLinks -MultiViews
-//     RewriteEngine On
-//     RewriteBase /
-//     RewriteRule ^api/?$ /wp-content/themes/in-servitio-turico/api/index.php [L,NC]
-//     RewriteRule ^api/(.+)$ /wp-content/themes/in-servitio-turico/api/index.php [L,NC]\n\n
-//     EOD;
-//     return $content . $rules;
-// }
-// add_filter('mod_rewrite_rules', 'lpe_htaccess');
-
-// function lpe_enable_flush_rules() {
-//     global $wp_rewrite;
-//     $wp_rewrite->flush_rules();
-// }
-// add_action( "admin_init", 'lpe_enable_flush_rules' );
 
 // Shortcodes
 function lpe_cookie_shortcode($atts, $content = null) {
@@ -154,6 +135,16 @@ function lpe_blocktypes() {
             'category'          => 'lpe',
             'icon'              => '',
             'keywords'          => array( 'events', 'frontpage' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'fp-projects',
+            'title'             => __('Frontpage Projectlist'),
+            'description'       => __('List of Projects to be positioned on the frontpage'),
+            'render_template'   => 'template-parts/blocks/fp-projects.php',
+            'category'          => 'lpe',
+            'icon'              => '',
+            'keywords'          => array( 'projects', 'frontpage' ),
         ));
     }
 }

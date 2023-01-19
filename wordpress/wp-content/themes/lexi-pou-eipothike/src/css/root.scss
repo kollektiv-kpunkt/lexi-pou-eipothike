@@ -9,8 +9,15 @@ html.noscroll {
 }
 
 :root {
-    --primary: #FFE700;
-    --secondary: #B5003A;
+    --primary: #9EFF00;
+    --secondary: #3B009C;
+
+    body {
+        --wp--preset--font-size--small: 0.6rem;
+        --wp--preset--font-size--medium: 1.5rem;
+        --wp--preset--font-size--large: 1.75rem;
+        --wp--preset--font-size--x-large: 2.5rem;
+    }
 }
 
 #wpadminbar {
@@ -23,4 +30,17 @@ html {
 
 img {
     width: 100%;
+}
+
+body.single-tribe_events {
+    #main-content {
+        margin-top: 7rem;
+        min-height: calc(100vh - 7rem - 13rem);
+    }
+}
+
+body {
+    #main-content {
+        min-height: calc(100vh - 13rem);
+    }
 }

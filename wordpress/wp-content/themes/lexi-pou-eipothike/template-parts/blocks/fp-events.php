@@ -12,6 +12,7 @@ if (count($events) < 3) {
         "start_date" => date('Y-m-d', time()),
         'orderby'        => 'date',
         'order'          => 'ASC',
+        'featured'       => false,
         'posts_per_page' => 3 - count($events)
     ));
     $events = array_merge($events, $events_bydate);
@@ -21,7 +22,7 @@ if (count($events) < 3) {
     <div class="lpe-fp-events-outer fp-container flex flex-col gap-5">
         <?php
         foreach($events as $event) :
-            if (in_array("external", get_field("external", $event->ID))) {
+            if (get_field("external", $event->ID) != "" && in_array("external", get_field("external", $event->ID))) {
                 $event_link = get_field("external_link", $event->ID);
             } else {
                 $event_link = get_permalink($event->ID);

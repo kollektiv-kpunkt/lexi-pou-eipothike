@@ -1,0 +1,34 @@
+.lpe-fp-projects-gallery {
+    --cols: 3;
+    --gap: 1.5rem;
+
+    gap: var(--gap);
+
+    @media (max-width: 980px) {
+        --cols: 2;
+    }
+
+    @media (max-width: 480px) {
+        --cols: 1;
+    }
+
+
+    .lpe-fp-project {
+        width: calc((100% - (var(--gap) * (var(--cols) - 1))) / var(--cols));
+        border-radius: 4px;
+        overflow: hidden;
+
+        .lpe-fp-project-image {
+            position: relative;
+            padding-bottom: calc(100% / 16 * 9);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                position: absolute;
+            }
+        }
+    }
+}
