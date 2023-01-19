@@ -2,6 +2,7 @@
 /*
 Template Name: Multimedia Layout
 Template Post Type: page
+TODO: Twitter und TikTok Temapltes und Facebook bugs
 */
 get_header();
 $medias = get_posts(

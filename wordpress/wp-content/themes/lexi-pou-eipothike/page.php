@@ -1,4 +1,5 @@
 <?php
+// TODO: Page heroine including featured image
 get_header();
 ?>
 <div class="lpe-heroine-container pt-36 pb-12 mb-12 bg-primary">

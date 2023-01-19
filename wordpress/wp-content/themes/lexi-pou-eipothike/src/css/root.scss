@@ -42,5 +42,14 @@ body.single-tribe_events {
 body {
     #main-content {
         min-height: calc(100vh - 13rem);
+        transition: 0.6s ease filter;
+
+        &.main-menu-open {
+            filter: blur(5px);
+
+            #main-content-menu-filter {
+                visibility: visible !important;
+            }
+        }
     }
 }

@@ -1,8 +1,8 @@
-<div class="lpe-fp-heroine-wrapper min-h-screen flex items-center py-20">
+<div class="lpe-fp-heroine-wrapper min-h-screen flex items-center py-28">
     <div class="md-container lpe-fp-heroine flex flex-wrap justify-between">
         <div class="lpe-fp-heroine-content text-primary w-2/5">
             <h1 class="lpe-bigshoulders text-8xl lg:text-9xl nobg">Fatima<br>Moumouni</h1>
-            <p class="text-3xl"><?= the_field("content") ?></p>
+            <div class="text-3xl"><?= the_field("content") ?></div>
             <a href="#" class="lpe-button lpe-fp-more-button lpe-button-more text-secondary block text-5xl w-fit mt-8"
                 onclick="
                     let e = window.event || event;

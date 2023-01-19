@@ -3,6 +3,7 @@ $projects = get_posts( array(
     'post_type' => 'projects',
     'posts_per_page' => 3
 ) );
+// TODO: External link to project page
 ?>
 
 <div class="fp-container lpe-fp-projects-wrapper">

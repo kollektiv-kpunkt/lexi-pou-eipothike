@@ -14,3 +14,17 @@
         </div>
     </div>
 </div>
+
+<div class="lpe-main-menu-container fixed top-0 right-0 z-30 w-full sm:w-fit sm:max-w-full text-white bg-secondary px-6 sm:px-16 py-24 h-full flex flex-col overflow-y-auto" style="transform: translateX(100%)">
+    <div class="lpe-main-nav-content my-auto">
+        <?php
+        wp_nav_menu( array(
+            'theme_location' => 'lpe-main-nav',
+            'container' => false,
+            'menu_class' => 'lpe-main-menu flex flex-col gap-12',
+            'menu_id' => 'lpe-main-menu',
+            'items_wrap' => '<ul id="%1$s" class="%2$s text-4xl font-bold">%3$s</ul>'
+        ) );
+        ?>
+    </div>
+</div>

@@ -6,7 +6,6 @@
             "key": "field_63852310294fe",
             "label": "Heroine Image",
             "name": "heroine_image",
-            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 1,
@@ -16,6 +15,7 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "return_format": "array",
             "library": "all",
             "min_width": "",
@@ -31,8 +31,7 @@
             "key": "field_6385233a294ff",
             "label": "Content",
             "name": "content",
-            "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -42,10 +41,10 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "delay": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         }
     ],
     "location": [
@@ -66,5 +65,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673085024
+    "modified": 1674131839
 }

@@ -16,3 +16,4 @@ get_template_part( "template-parts/elements/credits");
 ?>
 <body <?php body_class(); ?>>
     <div id="main-content">
+        <div id="main-content-menu-filter" class="fixed h-full w-full top-0 left-0 bg-black bg-opacity-40" style="visibility: hidden"></div>

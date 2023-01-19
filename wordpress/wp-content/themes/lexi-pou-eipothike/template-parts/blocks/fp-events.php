@@ -1,5 +1,7 @@
 <?php
 $now = date('Y-m-d', time());
+// TODO: GET ALL Events that aren't in the past
+// TODO: Multiday events
 $events = tribe_get_events(array(
     "start_date" => date('Y-m-d', time()),
     'orderby'        => 'date',
@@ -29,7 +31,7 @@ if (count($events) < 3) {
             }
         ?>
         <div class="lpe-fp-event-wrapper text-center p-4 pb-1 bg-primary rounded-sm shadow-md border-b-2 border-b-secondary text-secondary">
-            <p class="lpe-event-details"><?= tribe_get_start_date($event->ID, $display_time = false, $date_format = "m.d.") ?><?= (tribe_get_venue($event->ID) != "" && tribe_get_venue($event->ID) != NULL) ? " | " . tribe_get_venue( $event->ID) : "" ?></p>
+            <p class="lpe-event-details"><?= tribe_get_start_date($event->ID, $display_time = false, $date_format = "d.m.") ?><?= (tribe_get_venue($event->ID) != "" && tribe_get_venue($event->ID) != NULL) ? " | " . tribe_get_venue( $event->ID) : "" ?></p>
             <h3 class="lpe-event-title text-6xl nobg mb-0"><a class="lpe-noline" href="<?= $event_link ?>"><?= $event->post_title ?></a></h3>
             <div class="lpe-event-description-wrapper max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
                 <p class="lpe-event-description max-w-lg mx-auto pt-4"><?= get_the_excerpt($event->ID) ?></p>
