@@ -1,9 +1,9 @@
 {
-    "key": "group_63b955835e0c1",
-    "title": "DETAILS: Event",
+    "key": "group_63ce502fbab4a",
+    "title": "DETAILS: Project",
     "fields": [
         {
-            "key": "field_63b95583e7882",
+            "key": "field_63ce502f413e3",
             "label": "External?",
             "name": "external",
             "type": "checkbox",
@@ -15,9 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "choices": {
-                "external": "This event page is on a different Webpage"
+                "external": "This project page is on a different Webpage"
             },
             "default_value": [],
             "return_format": "value",
@@ -27,7 +26,7 @@
             "save_custom": 0
         },
         {
-            "key": "field_63b955abe7883",
+            "key": "field_63ce5057413e4",
             "label": "External Link",
             "name": "external_link",
             "type": "url",
@@ -36,7 +35,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_63b95583e7882",
+                        "field": "field_63ce502f413e3",
                         "operator": "==",
                         "value": "external"
                     }
@@ -47,16 +46,15 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "",
             "placeholder": ""
         },
         {
-            "key": "field_63ce4f3226e58",
-            "label": "Date Label",
-            "name": "date_label",
-            "type": "text",
-            "instructions": "If you don't want the Event display to show just the Date of the event, write something in here.",
+            "key": "field_63e21f18cbede",
+            "label": "Different Heroine Image",
+            "name": "different_heroine_image",
+            "type": "image",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -64,11 +62,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -76,7 +79,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "tribe_events"
+                "value": "projects"
             }
         ]
     ],
@@ -89,5 +92,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674465121
+    "modified": 1675763501
 }

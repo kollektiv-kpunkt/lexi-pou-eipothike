@@ -1,11 +1,11 @@
 <?php
 get_header();
+get_template_part( "template-parts/elements/page-header", "", array(
+    "title" => get_the_title(),
+    "subtitle" => get_field("subtitle"),
+    "featured_image" => get_field("different_heroine_image")["url"] ?? get_the_post_thumbnail_url()
+) );
 ?>
-<div class="lpe-heroine-container pt-36 pb-12 mb-12 bg-primary">
-    <div class="lpe-heroine-inner md-container">
-        <h1 class="bg-secondary"><span class="text-primary"><?= the_title() ?></span></h1>
-    </div>
-</div>
 
 <main class="md-container" id="lpe-main-page-content">
     <div class="lpe-content-container">

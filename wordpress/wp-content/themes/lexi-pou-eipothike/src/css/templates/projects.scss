@@ -1,0 +1,64 @@
+.lpe-projects-gallery {
+    --cols: 3;
+    --gap: 1.5rem;
+
+    gap: var(--gap);
+
+    @media (max-width: 980px) {
+        --cols: 2;
+    }
+
+    @media (max-width: 480px) {
+        --cols: 1;
+    }
+
+
+    .lpe-project {
+        width: calc((100% - (var(--gap) * (var(--cols) - 1))) / var(--cols));
+        border-radius: 4px;
+        overflow: hidden;
+
+        .lpe-project-image {
+            position: relative;
+            padding-bottom: calc(100% / 16 * 9);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.lpe-projects-pagination {
+    display: flex;
+    justify-content: space-between;
+
+    .page-numbers:not(.next):not(.prev) {
+        display: none;
+    }
+
+    a.next,
+    a.prev {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+        background-image: none !important;
+        color: var(--secondary) !important;
+        background-color: var(--primary);
+
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.next {
+            margin-left: auto;
+        }
+    }
+}

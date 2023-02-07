@@ -15,6 +15,7 @@
             align-items: flex-end;
             width: 3rem;
             height: 1.25rem;
+            transition: 0.25s ease transform;
 
             >div {
                 width: 100%;
@@ -46,7 +47,7 @@
                 &.main-menu-x {
                     >div {
                         &:nth-child(1) {
-                            transform: rotate(45deg) translateX(0.25rem);
+                            transform: rotate(45deg) translateY(0.5rem) translateX(0.25rem);
                             transform-origin: center;
                         }
 
@@ -55,10 +56,12 @@
                         }
 
                         &:nth-child(3) {
-                            transform: rotate(-45deg) translateX(-0.25rem);
+                            transform: rotate(-45deg) translateY(-0.5rem) translateX(0.25rem);
                             transform-origin: center;
                         }
                     }
+
+                    transform: translateX(0.25rem);
                 }
             }
         }
@@ -67,4 +70,8 @@
 
 .lpe-main-menu-container {
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) transform;
+
+    @media (min-width: 2080px) {
+        min-width: calc((100vw - 1380px) / 2 + 7rem);
+    }
 }
